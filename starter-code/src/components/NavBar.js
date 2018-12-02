@@ -1,5 +1,7 @@
 import React from "react";
-import {NavButton} from "./NavButton";
+//import {NavButton} from "./_NavButton";
+import {CoolButton} from "./CoolButton";
+
 
 export const NavBar = () => {
 	return (
@@ -22,8 +24,8 @@ export const NavBar = () => {
 				<div className="navbar-end">
 					<div className="navbar-item">
 						<div className="field is-grouped">
-							<NavButton classNavEnd="navbar-end" btnStyle="is-info" navBtnText="Login" />
-							<NavButton classNavEnd="navbar-end" btnStyle="is-primary" navBtnText="Download" />
+							<CoolButton className="is-info">Login</CoolButton>
+							<CoolButton className="is-primary">Download</CoolButton>
 						</div>
 					</div>
 				</div>
