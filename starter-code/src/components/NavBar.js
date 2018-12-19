@@ -33,8 +33,8 @@ export const NavBar = () => {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="field is-grouped">
-              <CoolButton className="is-info">Login</CoolButton>
-              <CoolButton className="is-primary">Signup</CoolButton>
+              <CoolButton isInfo>Login</CoolButton>
+              <CoolButton isPrimary>Signup</CoolButton>
             </div>
           </div>
         </div>

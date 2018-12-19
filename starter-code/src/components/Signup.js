@@ -6,7 +6,7 @@ import { CoolButton } from './CoolButton';
 
 export const Signup = () => {
   return (
-    <Container>
+    <Container >
       <NavBar />
       <main className="main-content">
         <div className="columns">
@@ -32,7 +32,7 @@ export const Signup = () => {
         </div>
         <div className="column is-half is-offset-one-quarter ">
           <div className="field is-text-centered main-buttons">
-            <CoolButton isMedium isDanger className="is-rounded">
+            <CoolButton isMedium isDanger isRounded>
               Submit
             </CoolButton>
           </div>

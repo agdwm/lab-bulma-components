@@ -30,11 +30,14 @@ const classes = {
 };
 
 export const CoolButton = props => {
-  var propsClasses = Object.keys(props).map(e => classes[e]).join(" ") + props.className;
-  var btnClasses = `button ${propsClasses}`;
+  let propsClasses = Object.keys(props).map(e => classes[e]).join(" ");
+  props.className ? propsClasses += props.className : '';
+  let btnClasses = `button ${propsClasses}`;
+
   return (
     <p className="control">
       <a className={btnClasses} href="#">{props.children}</a>
     </p>
+
   );
 };
