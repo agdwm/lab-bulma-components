@@ -10,17 +10,24 @@ const classes = {
   isDanger: "is-danger"
 };
 
+export const Message = props => {
+  const { className, textHeader, textBody } = props;
 
-export const Message = (props) => {
-  const {children} = props;
-  
   let propsClasses = Object.keys(props).map(e => classes[e]).join(" ");
-  props.className ? propsClasses += props.className : '';
+  className ? (propsClasses += className) : "";
   let messageClasses = `message ${propsClasses}`;
 
   return (
     <article className={messageClasses}>
-      {children}
+      {textHeader &&
+        <div className="message-header">
+          <p>{textHeader}</p>
+          <button className="delete" aria-label="delete" />
+        </div>
+      }
+      <div className="message-body">
+        <p>{textBody}</p>
+      </div>
     </article>
   );
 };
